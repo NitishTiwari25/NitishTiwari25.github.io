@@ -3,7 +3,11 @@
  <title>Amazon</title>	
     <link rel="stylesheet" href="styleamzon.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <style>
+.slider{
+height:500px;
+}
+</style>
   </head>
  <body>
    <header>
@@ -57,12 +61,19 @@
        <p>Shop details in Electronics</p>
      </div>
 </panel>
-  <div class="hero"> 
-  <div class="hero-message">
-<img src="hero_image.jpg">
-   <p>You are on amazon.com.you can also shop on amazon india for millions of products with fast local delivery <a>Click here to go to amazon</a></p>
-    </div>
-  </div>
+  <section>
+
+<img class="slider" src="toogle1 (3).png" style="width:100%" >
+
+
+<img class="slider" src="toogle1 (4).png" style="width:100%"  >
+
+
+<img class="slider" src="toogle1 (1).png" style="width:100%"  >
+
+
+<img class="slider" src="toogle1 (2).png" style="width:100%"  >
+</section>
   <div class="shop">
     <div class="boxx1 box">
       <div class="box-content">
@@ -190,6 +201,24 @@
       </div>
     </div>
   </footer>
+
+	 <script>
+var myindex=0;
+carousel();
+function carousel(){
+var i;
+var x=document.getElementsByClassName("slider");
+for(i=0;i<x.length;i++){
+x[i].style.display="none";
+}
+myindex++;
+if(myindex > x.length){
+myindex=1;
+}
+x[myindex-1].style.display="block";
+setTimeout(carousel,3000);
+}
+</script>
 </body>
 </html>
      
